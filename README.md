@@ -2,6 +2,6 @@
 
 Diagrama de apoyo:
 
-<img src="imágenes/interfaz-grafica.png" width="900" height="480" >
+<img src="imágenes/Interfaz-grafica.png" width="900" height="480" >
 
 
