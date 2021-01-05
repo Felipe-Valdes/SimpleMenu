@@ -25,6 +25,7 @@ public class Menus {
                 System.out.println("Pulse 2 para añadir sopaipillas");
                 System.out.println("Pulse 3 para añadir pan con queso");
                 System.out.println("Pulse 4 para ver la lista de su compra(ventana2)");
+                System.out.println("Pulse 5 para salir (cerrar el programa)");
                 opcion = teclado.nextInt();
                 switch (opcion) {
                     case 1:
@@ -58,6 +59,9 @@ public class Menus {
                         ventana2();
                         break;
 
+                    case 5:
+                        break;
+
                     default:
                         System.out.println("Seleccione un número válido");
 
@@ -68,7 +72,7 @@ public class Menus {
                 teclado.next();
             }
 
-        } while (opcion != 4);
+        } while (opcion == 1 || opcion == 2 || opcion == 3 || opcion == 4);
     }
 
 
