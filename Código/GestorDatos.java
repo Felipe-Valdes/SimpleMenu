@@ -13,8 +13,8 @@ public class GestorDatos {
 
         pw.println("Ha comprado: ");
         pw.println(metodo.nCompletos+ " Completos");
-        pw.println(metodo.nCompletos+ " Sopaipillas");
-        pw.println(metodo.nCompletos+ " Panes con queso");
+        pw.println(metodo.nSopaipillas+ " Sopaipillas");
+        pw.println(metodo.nPanesConQueso+ " Panes con queso");
 
         pw.close();
     }
