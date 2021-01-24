@@ -6,14 +6,14 @@ public class Menu {
     GestorDatos imprimir = new GestorDatos();
     Metodo metodos = new Metodo();
 
-    public enum Tipo {AñadirCompletos, AñadirSopaipillas, AñadirPanConQueso, VerLista,
-    AñadirProductos, QuitarCompletos, QuitarSopaipillas, QuitarPanConQueso, Pagar}
+    public enum Tipo {AñadirCompletos, AñadirSopaipillas, AñadirPanConQueso,MostrarLista, VentanaDeCompra,
+    AñadirMasProductos, QuitarCompletos, QuitarSopaipillas, QuitarPanConQueso, Pagar}
 
     public void ventana1() throws IOException {
 
-        Tipo[] opciones1 = {Tipo.AñadirCompletos, Tipo.AñadirSopaipillas, Tipo.AñadirPanConQueso, Tipo.VerLista};
+        Tipo[] opciones1 = {Tipo.AñadirCompletos, Tipo.AñadirSopaipillas, Tipo.AñadirPanConQueso,Tipo.MostrarLista, Tipo.VentanaDeCompra};
         Tipo opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opción",
-                "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones1, opciones1[3]);
+                "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones1, opciones1[4]);
         while (opcion != null) {
             switch (opcion) {
                 case AñadirCompletos:
@@ -45,23 +45,38 @@ public class Menu {
                     }
                     break;
 
-                case VerLista:
+
+                case MostrarLista:
+                    JOptionPane.showMessageDialog(null, "Hasta ahora lleva:\n" +
+                            +Metodo.nCompletos+" Completos\n" +
+                            +Metodo.nSopaipillas+" Sopaipillas\n" +
+                            +Metodo.nPanesConQueso+" Panes con queso");
+                    break;
+
+                case VentanaDeCompra:
                     ventana2();
                     break;
 
+
             }
             opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opcion",
-                    "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones1, opciones1[3]);
+                    "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones1, opciones1[4]);
         }
     }
 
     public void ventana2() throws IOException {
-    Tipo[] opciones2 = {Tipo.AñadirProductos, Tipo.QuitarCompletos, Tipo.QuitarSopaipillas, Tipo.QuitarPanConQueso, Tipo.Pagar};
+    Tipo[] opciones2 = {Tipo.MostrarLista, Tipo.AñadirMasProductos, Tipo.QuitarCompletos, Tipo.QuitarSopaipillas, Tipo.QuitarPanConQueso, Tipo.Pagar};
     Tipo opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opción",
-            "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones2, opciones2[4]);
+            "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones2, opciones2[5]);
         while (opcion != null) {
         switch (opcion) {
-            case AñadirProductos:
+            case MostrarLista:
+                JOptionPane.showMessageDialog(null, "Hasta ahora lleva:\n" +
+                        +Metodo.nCompletos+" Completos\n" +
+                        +Metodo.nSopaipillas+" Sopaipillas\n" +
+                        +Metodo.nPanesConQueso+" Panes con queso");
+
+            case AñadirMasProductos:
                 ventana1();
                 break;
 
@@ -110,14 +125,10 @@ public class Menu {
 
         }
         opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opcion",
-                "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones2, opciones2[4]);
+                "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones2, opciones2[5]);
     }
 }
 
-    /*JOptionPane.showMessageDialog(null, "Hasta ahora lleva:\n" +
-                +Metodo.nCompletos+" Completos\n" +
-                +Metodo.nSopaipillas+" Sopaipillas\n" +
-                +Metodo.nPanesConQueso+" Panes con queso");*/
 
     public void ventana3() throws IOException {
         JOptionPane.showMessageDialog(null, "Ha comprado:\n" +
