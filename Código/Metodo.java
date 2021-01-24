@@ -21,7 +21,7 @@ public class Metodo {
     }
 
     public int añadirPanesConQueso(int nPanesConQueso) {
-        this.nPanesConQueso = nCompletos + this.nPanesConQueso;
+        this.nPanesConQueso = nPanesConQueso + this.nPanesConQueso;
         return this.nPanesConQueso;
     }
 
