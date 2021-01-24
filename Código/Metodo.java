@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -12,16 +13,19 @@ public class Metodo {
 
     public int añadirCompletos(int nCompletos) {
         this.nCompletos = nCompletos + this.nCompletos;
+        JOptionPane.showMessageDialog(null,"Ha añadido: "+this.nCompletos+ " completos");
         return this.nCompletos;
     }
 
     public int añadirSopaipillas(int nSopaipillas) {
         this.nSopaipillas = nSopaipillas + this.nSopaipillas;
+        JOptionPane.showMessageDialog(null,"Ha añadido: "+this.nSopaipillas+ " Sopaipillas");
         return this.nSopaipillas;
     }
 
     public int añadirPanesConQueso(int nPanesConQueso) {
         this.nPanesConQueso = nPanesConQueso + this.nPanesConQueso;
+        JOptionPane.showMessageDialog(null,"Ha añadido: "+this.nPanesConQueso+ " Sopaipillas");
         return this.nPanesConQueso;
     }
 
