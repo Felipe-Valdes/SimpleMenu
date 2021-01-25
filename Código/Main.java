@@ -1,9 +1,12 @@
-public class Main {
-    public static void main(String[] args) {
-        Producto crearProducto = new Producto();
-        Menus menu = new Menus();
+import javax.swing.*;
+import java.io.IOException;
 
-        menu.ventana1();
+public class Main {
+    public static void main(String[] args) throws IOException {
+        Metodo crearProducto = new Metodo();
+        Menu menu = new Menu();
+        JOptionPane.showMessageDialog(null, "Bienvenido a SimpleMenu");
+        menu.Ventana1();
 
 
     }
