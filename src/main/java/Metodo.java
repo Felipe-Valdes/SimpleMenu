@@ -139,7 +139,7 @@ public class Metodo {
                 +Metodo.nCompletos + " Completos\n" +
                 +Metodo.nSopaipillas + " Sopaipillas\n" +
                 +Metodo.nPanesConQueso + " Panes con queso\n" +
-                "Y le estaría costando: " + CalcularValor());
+                "Y le estaría costando: " + CalcularValor()+"$");
     }
 
     //método para mostrar la boleta
@@ -149,7 +149,7 @@ public class Metodo {
                 +Metodo.nCompletos + " Completos\n" +
                 +Metodo.nSopaipillas + " Sopaipillas\n" +
                 +Metodo.nPanesConQueso + " Panes con queso\n" +
-                "Y le ha costado: " + CalcularValor());
+                "Y le ha costado: " + CalcularValor()+"$");
 
     }
 
