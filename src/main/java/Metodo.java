@@ -29,9 +29,9 @@ public class Metodo {
 
     //sopaipillas
 
-    public int añadirSopaipillas(int nSopaipillas) {
+    public int añadirSopaipillas(int b) {
         this.nSopaipillas = nSopaipillas + this.nSopaipillas;
-        JOptionPane.showMessageDialog(null,"Ha añadido: "+this.nSopaipillas+ " Sopaipillas");
+        JOptionPane.showMessageDialog(null,"Ha añadido: "+b+ " Sopaipillas");
         return this.nSopaipillas;
     }
     public int quitarSopaipillas(int b) throws IOException {
@@ -49,9 +49,9 @@ public class Metodo {
 
     //panes con queso
 
-    public int añadirPanesConQueso(int nPanesConQueso) {
+    public int añadirPanesConQueso(int c) {
         this.nPanesConQueso = nPanesConQueso + this.nPanesConQueso;
-        JOptionPane.showMessageDialog(null,"Ha añadido: "+this.nPanesConQueso+ " panes con queso");
+        JOptionPane.showMessageDialog(null,"Ha añadido: "+c+ " panes con queso");
         return this.nPanesConQueso;
     }
     public int quitarPanConQueso(int c) throws IOException {
