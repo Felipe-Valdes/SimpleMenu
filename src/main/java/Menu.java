@@ -11,20 +11,13 @@ public class Menu {
 
     public void Ventana1() throws IOException {
 
-        Tipo[] opciones1 = {Tipo.AñadirProductos,Tipo.MostrarLista, Tipo.VentanaDeCompra};
+        Tipo[] opciones1 = {Tipo.AñadirProductos, Tipo.VentanaDeCompra};
         Tipo opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opción",
-                "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones1, opciones1[2]);
+                "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones1, opciones1[1]);
         while (opcion != null) {
             switch (opcion) {
                 case AñadirProductos:
                     AñadirProductos();
-                    break;
-
-                case MostrarLista:
-                    JOptionPane.showMessageDialog(null, "Hasta ahora lleva:\n" +
-                            +Metodo.nCompletos+" Completos\n" +
-                            +Metodo.nSopaipillas+" Sopaipillas\n" +
-                            +Metodo.nPanesConQueso+" Panes con queso");
                     break;
 
                 case VentanaDeCompra:
@@ -34,7 +27,7 @@ public class Menu {
 
             }
             opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opcion",
-                    "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones1, opciones1[2]);
+                    "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones1, opciones1[1]);
         }
     }
 
@@ -64,7 +57,6 @@ public class Menu {
                     break;
 
                 case AñadirPanConQueso:
-
                     try {
                         int c = Integer.parseInt(JOptionPane.showInputDialog("¿Cuántos panes con queso quiere añadir?"));
                         metodos.añadirPanesConQueso(c);
@@ -74,7 +66,8 @@ public class Menu {
                     break;
 
             }
-            opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opcion",
+            opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opcion\n" +
+                            "Pulse Cancel para volver",
                     "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opcionesAñadir, opcionesAñadir[2]);
         }
 
@@ -92,9 +85,11 @@ public class Menu {
                         +Metodo.nCompletos+" Completos\n" +
                         +Metodo.nSopaipillas+" Sopaipillas\n" +
                         +Metodo.nPanesConQueso+" Panes con queso");
+                Ventana2();
+                break;
 
             case AñadirMasProductos:
-                Ventana1();
+                AñadirProductos();
                 break;
 
             case QuitarProductos:
@@ -106,7 +101,7 @@ public class Menu {
                 System.exit(1);
 
         }
-        opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opcion",
+        opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opcion\n",
                 "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opciones2, opciones2[3]);
     }
 }
@@ -146,7 +141,8 @@ public class Menu {
                     break;
 
             }
-            opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opcion",
+            opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opcion\n" +
+                            "Pulse Cancel para volver",
                     "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opcionesQuitar, opcionesQuitar[2]);
         }
     }
