@@ -40,7 +40,8 @@ public class Menu {
 
     public void AñadirProductos(){
         Tipo[] opcionesAñadir = {Tipo.AñadirCompletos, Tipo.AñadirSopaipillas, Tipo.AñadirPanConQueso};
-        Tipo opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opción",
+        Tipo opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opción\n" +
+                        "Presione Cancel para volver",
                 "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opcionesAñadir, opcionesAñadir[2]);
         while (opcion != null) {
             switch (opcion) {
@@ -112,7 +113,8 @@ public class Menu {
 
     public void QuitarProductos() throws IOException {
         Tipo[] opcionesQuitar = {Tipo.QuitarCompletos, Tipo.QuitarSopaipillas, Tipo.QuitarPanConQueso};
-        Tipo opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opción",
+        Tipo opcion = (Tipo) JOptionPane.showInputDialog(null, "Seleccione una opción\n" +
+                        "Presione Cancel para volver",
                 "SimpleMenu", JOptionPane.INFORMATION_MESSAGE, null, opcionesQuitar, opcionesQuitar[2]);
         while (opcion != null) {
             switch (opcion) {
