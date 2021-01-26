@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 public class GestorDatos {
     Metodo metodo = new Metodo();
 
-    public void ImprimirBoleta() throws IOException {
+    public void imprimirBoleta() throws IOException {
         File boleta = new File("boleta.txt");
         FileWriter fw = new FileWriter(boleta);
         PrintWriter pw = new PrintWriter(fw);
