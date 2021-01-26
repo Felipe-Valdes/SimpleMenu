@@ -21,7 +21,11 @@ public class Metodo {
             menu.Ventana2();
         }
             this.nCompletos = this.nCompletos - a;
-        JOptionPane.showMessageDialog(null, "Ha quitado: " + a + " completos");
+        //si se quita demasiado y el valor pasa a negativo, se quedará en 0
+        if (this.nCompletos<0) {
+            this.nCompletos = 0;
+        }else
+            JOptionPane.showMessageDialog(null, "Ha quitado: " + a + " completos");
         return this.nCompletos;
     }
 
@@ -41,7 +45,11 @@ public class Metodo {
             menu.Ventana2();
         }
         this.nSopaipillas = this.nSopaipillas - b;
-        JOptionPane.showMessageDialog(null, "Ha quitado: " + b + " Sopaipillas");
+        //si se pasa a negativo el valor quedará en 0
+        if (this.nSopaipillas <0){
+            this.nSopaipillas = 0;
+        }else
+            JOptionPane.showMessageDialog(null, "Ha quitado: " + b + " Sopaipillas");
         return this.nSopaipillas;
     }
 
@@ -61,9 +69,14 @@ public class Metodo {
             menu.Ventana2();
         }
         this.nPanesConQueso = this.nPanesConQueso - c;
-        JOptionPane.showMessageDialog(null, "Ha quitado: " + c + " panes con queso");
+        //si se pasa a negativo el valor se quedará en 0
+        if (this.nPanesConQueso<0){
+            this.nPanesConQueso=0;
+        }
+            JOptionPane.showMessageDialog(null, "Ha quitado: " + c + " panes con queso");
         return this.nPanesConQueso;
     }
-
+    
 
 }
+
