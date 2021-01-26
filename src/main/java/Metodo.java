@@ -30,7 +30,7 @@ public class Metodo {
     //sopaipillas
 
     public int añadirSopaipillas(int b) {
-        this.nSopaipillas = nSopaipillas + this.nSopaipillas;
+        this.nSopaipillas = b + this.nSopaipillas;
         JOptionPane.showMessageDialog(null,"Ha añadido: "+b+ " Sopaipillas");
         return this.nSopaipillas;
     }
@@ -50,7 +50,7 @@ public class Metodo {
     //panes con queso
 
     public int añadirPanesConQueso(int c) {
-        this.nPanesConQueso = nPanesConQueso + this.nPanesConQueso;
+        this.nPanesConQueso = c + this.nPanesConQueso;
         JOptionPane.showMessageDialog(null,"Ha añadido: "+c+ " panes con queso");
         return this.nPanesConQueso;
     }
@@ -64,8 +64,6 @@ public class Metodo {
         JOptionPane.showMessageDialog(null, "Ha quitado: " + c + " panes con queso");
         return this.nPanesConQueso;
     }
-
-
 
 
 }
